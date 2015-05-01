@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="frontpageAPP">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ current_page }} | {{ proj_info["titles"]["t1"] }}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+
+    {% include 'snippet/header.html' %} <!-- Nav content (nav.html) -->
+
+    {% block content %} {% endblock %}
+
+    {% include 'snippet/footer.html' %}
+
+    <script src="/js/lib/jquery.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    {% block js %} {% endblock %}
+  </body>
+</html>
